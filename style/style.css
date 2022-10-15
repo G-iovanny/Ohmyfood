@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*CSS du header*/
 * {
   padding: 0;
@@ -18,4 +19,85 @@ header {
   font-family: "Shrikhand";
   font-size: 1.7em;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.55);
+}
+
+/*Section position avec l'icone*/
+.position {
+  text-align: center;
+  padding: 18px;
+}
+.position i {
+  padding-right: 10px;
+}
+
+/*Section présentation, description et bouton*/
+.presentation {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 60px 0px 60px 0px;
+}
+.presentation__desc {
+  color: #4d4d4d;
+  font-weight: 400;
+  padding-top: 12px;
+  margin-bottom: 30px;
+}
+.presentation__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+
+/*Section fonctionnement avec les listes tutoriels*/
+.fonc {
+  background-color: white;
+  /*Incrémentation du chiffre à chaque liste (1,2,3)*/
+}
+.fonc__title {
+  width: 95%;
+  margin: auto;
+  font-size: 1.8em;
+  padding: 60px 0px 40px 0px;
+}
+.fonc__list {
+  width: 95%;
+  margin: auto;
+  list-style-type: none;
+  padding-bottom: 50px;
+}
+.fonc li {
+  counter-increment: Compte;
+}
+.fonc__tuto {
+  padding: 25px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  box-shadow: 0px 5px 7px -2px rgba(0, 0, 0, 0.23);
+  margin-left: 15px;
+  position: relative;
+  /*le content prend en valeur le numéro de la liste incrémentée*/
+}
+.fonc__tuto i {
+  padding: 0px 30px 0px 30px;
+  color: #888888;
+  font-size: 1.2em;
+}
+.fonc__tuto::before {
+  content: counter(Compte);
+  width: 20px;
+  height: 20px;
+  color: white;
+  background-color: #9356dc;
+  position: absolute;
+  text-align: center;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */

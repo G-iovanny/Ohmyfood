@@ -1,0 +1,17 @@
+$fontTitle : "Shrikhand";
+@import "../style/mixins";
+
+* { 
+    padding: 0; margin:0; 
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body {
+    background-color: #eaeaea;
+    counter-reset: Compte;
+}
+
+header {
+    @include header();
+}

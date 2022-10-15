@@ -1,0 +1,21 @@
+/*CSS du header*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  background-color: #eaeaea;
+  counter-reset: Compte;
+}
+
+header {
+  background-color: white;
+  padding: 10px 0px;
+  text-align: center;
+  font-family: "Shrikhand";
+  font-size: 1.7em;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.55);
+}/*# sourceMappingURL=style.css.map */

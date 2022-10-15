@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*CSS du header*/
+/*CSS du footer*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  background-color: #eaeaea;
+}
+
+/* Le CSS du header est dans _mixins.scs, on l'inclut en premier : */
+header {
+  background-color: white;
+  padding: 10px 0px;
+  text-align: center;
+  font-family: "Shrikhand";
+  font-size: 1.7em;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+header a {
+  color: black;
+}
+header i {
+  position: absolute;
+  /*Pour centrer la flèche sur le header*/
+  top: 50%;
+  left: 30px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+header i:hover {
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+
+/*L'image d'illustration au top de la page*/
+.illustration {
+  width: 100%;
+  height: 300px;
+}
+.illustration img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=AlaFrancaise.css.map */

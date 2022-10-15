@@ -192,3 +192,33 @@ footer {
     @include footer();
 }
 
+/*MEDIA QUERIES*/
+@media screen and (min-width: 920px) {
+    .fonc {
+        &__tuto {
+            width: 30%;
+            
+            i {
+            padding: 0px 7px 0px 0px;
+        }
+    }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+    }
+   
+    }
+
+    .container-articles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: auto;
+
+        .card {
+            width: 47%;
+        }
+    }
+
+
+}

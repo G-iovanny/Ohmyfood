@@ -197,4 +197,27 @@ footer .fa-utensils {
 }
 footer .fa-handshake-angle {
   margin-right: 8px;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 920px) {
+  .fonc__tuto {
+    width: 30%;
+  }
+  .fonc__tuto i {
+    padding: 0px 7px 0px 0px;
+  }
+  .fonc__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-articles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+  }
+  .container-articles .card {
+    width: 47%;
+  }
 }/*# sourceMappingURL=style.css.map */

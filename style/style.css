@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*CSS du header*/
+/*CSS du footer*/
 * {
   padding: 0;
   margin: 0;
@@ -105,6 +106,7 @@ header {
 /*Partie section Restaurant*/
 .restaurant {
   background-color: #f6f6f6;
+  padding-bottom: 50px;
 }
 .restaurant h2 {
   font-size: 1.8em;
@@ -171,4 +173,28 @@ header {
 .card__liked:hover {
   opacity: 1;
   transition: 0.5s;
+}
+
+footer {
+  padding: 20px 0px 25px 15px;
+  background-color: #353535;
+  color: #eaeaea;
+}
+footer h2 {
+  font-family: "Shrikhand";
+  font-size: 1.1em;
+  padding-bottom: 20px;
+}
+footer ul {
+  list-style-type: none;
+}
+footer li {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+footer .fa-utensils {
+  margin-right: 14px;
+}
+footer .fa-handshake-angle {
+  margin-right: 8px;
 }/*# sourceMappingURL=style.css.map */

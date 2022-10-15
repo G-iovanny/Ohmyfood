@@ -111,6 +111,7 @@ header {
 
 .restaurant {
     background-color:#f6f6f6;
+    padding-bottom: 50px;
 
     h2 {
         font-size: 1.8em;
@@ -185,5 +186,9 @@ header {
                 transition: 0.5s;
             }
     }
+}
+
+footer {
+    @include footer();
 }
 

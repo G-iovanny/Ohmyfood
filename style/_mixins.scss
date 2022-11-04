@@ -6,6 +6,24 @@
     font-family: $fontTitle;
     font-size: 1.7em;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 55%);
+    position: relative;
+
+    a {
+        color: black;
+    }
+
+    i {
+        position: absolute;
+        /*Pour centrer la flèche sur le header*/
+        top: 50%; left: 30px;
+        transform: translate(-50%, -50%);
+        transition: 0.3s;
+
+        &:hover {
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+    }
 }
 
 /*CSS du footer*/
@@ -35,5 +53,216 @@
 
     .fa-handshake-angle {
         margin-right: 8px;
+    }
+}
+
+/*CSS des boutons avec dégradé rose*/
+/*le padding du bouton est une variable avec argument, par défaut 10px sur Y et 20px sur X, et 20px de border-radius par défaut*/
+@mixin btn($paddingY : 10px, $paddingX : 20px, $border-radius : 20px) {
+    display: inline-block;
+    padding: $paddingY $paddingX;
+    border-radius: $border-radius;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+}
+
+/*CSS du container des menus*/
+@mixin container-menus {
+    width: 95%;
+    margin: auto;
+
+    .presentation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-family: $fontTitle;
+            font-size: 30px;
+            padding-top: 30px;
+        }
+
+        &__icon {
+            font-size: 1.5em;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            margin-right: 12px;
+            margin-top: 15px;
+
+            &__liked {
+                position: absolute;
+                top: 0; left: 0;
+                background: linear-gradient(350deg, #9356DC 25%, #FF79DA 65%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
+
+                &:hover {
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                }
+            }
+        }
+    }
+
+    .menu-cards {
+        margin-top: 20px;
+
+        .menu {
+            width: 100%;
+            margin: 0px 0px 25px 0px;
+    
+            &__title {
+                font-size: 1.2em;
+                font-weight: 200;
+                position: relative;
+                text-transform: uppercase;
+                padding: 20px 0px 0px 10px;
+    
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    width: 40px; height: 4px;
+                    background-color: $tertiary-color;
+                }
+            }
+        }
+
+        .container-cards {
+            .cards {
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 22px;
+                overflow: hidden;
+                box-shadow: 0px 10px 18px -5px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                margin-bottom: 15px;
+                
+                //Les animations démarrent en décalées
+                &__delay {
+                    &1 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s;
+                    }
+
+                    &2 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.2s both;
+                    }
+
+                    &3 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.3s both;
+                    }
+
+                    &4 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.4s both;
+                    }
+
+                    &5 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.5s both;
+                    }
+
+                    &6 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.6s both;
+                    }
+
+                    &7 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.7s both;
+                    }
+
+                    &8 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.8s both;
+                    }
+
+                    &9 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.9s both;
+                    }
+                }
+
+                // au survol de la cards, le container se remet à 0px et l'icone rotate sur elle même
+                &:hover {
+                    .cards__price-select {
+                        margin-right: 0px;
+                    }
+
+                    .cards__select i {
+                        transform: rotate(-360deg);
+                    }
+                }
+            }
+
+            .cards__desc {
+                padding: 18px;
+                width: 250px;
+
+                & > h3 {
+                    padding-bottom: 5px;
+                }
+                & > p {
+                font-weight: 100;
+                white-space: nowrap;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+                }
+            }
+
+            .cards__price-select {
+                display: flex;
+                margin-right: -70px;
+                transition: margin-right 0.5s;
+            }
+
+            .cards__price {
+                display: flex;
+                align-items: flex-end;
+                padding: 0px 15px 17px 0px;
+            }
+
+            .cards__select {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                width: 70px;
+                padding: 18px;
+                background-color: $tertiary-color;
+
+                & i {
+                    transition: transform 0.6s;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    .container-btn {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0px 80px 0px;
+        
+        & .btn {
+            @include btn(15px, 50px, 30px);
+            transition: transform 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+@keyframes toLeft {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
     }
 }

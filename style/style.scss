@@ -47,13 +47,7 @@ header {
     }
 
     &__btn {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 20px;
-        text-decoration: none;
-        color: white;
-        font-size: 1em;
-        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+       @include btn();
     }
 }
 
@@ -223,7 +217,5 @@ footer {
         .card {
             width: 47%;
         }
-    }
-
-
+    } 
 }

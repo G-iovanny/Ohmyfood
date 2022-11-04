@@ -1,6 +1,29 @@
 @charset "UTF-8";
 /*CSS du header*/
 /*CSS du footer*/
+/*CSS des boutons avec dégradé rose*/
+/*le padding du bouton est une variable avec argument, par défaut 10px sur Y et 20px sur X, et 20px de border-radius par défaut*/
+/*CSS du container des menus*/
+@-webkit-keyframes toLeft {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes toLeft {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +43,22 @@ header {
   font-family: "Shrikhand";
   font-size: 1.7em;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+header a {
+  color: black;
+}
+header i {
+  position: absolute;
+  /*Pour centrer la flèche sur le header*/
+  top: 50%;
+  left: 30px;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+header i:hover {
+  font-size: 1.2em;
+  transition: 0.3s;
 }
 
 /*Section position avec l'icone*/

@@ -18,25 +18,6 @@ body {
 /* Le CSS du header est dans _mixins.scs, on l'inclut en premier : */
 header {
     @include header();
-    position: relative;
-
-    a {
-        color: black;
-    }
-
-    i {
-        position: absolute;
-        /*Pour centrer la flèche sur le header*/
-        top: 50%; left: 30px;
-        transform: translate(-50%, -50%);
-        transition: 0.3s;
-
-        &:hover {
-            font-size: 1.2em;
-            transition: 0.3s;
-        }
-    }
-
 }
 
 /*L'image d'illustration au top de la page*/
@@ -53,89 +34,21 @@ header {
 
 
 .container {
-    width: 95%;
-    margin: auto;
+    @include container-menus();
+}
 
-    .presentation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+footer {
+    @include footer();
+}
 
-        &__title {
-            font-family: $fontTitle;
-            font-size: 30px;
-            padding-top: 30px;
-        }
+/*MEDIA QUERIES*/
+@media screen and (min-width: 920px) {
+  .container-menu-cards {
+    display: flex;
+    justify-content: space-between;
 
-        &__icon {
-            font-size: 1.5em;
-            overflow: hidden;
-            cursor: pointer;
-            position: relative;
-            margin-right: 12px;
-
-            &__liked {
-                position: absolute;
-                top: 0; left: 0;
-                background: linear-gradient(350deg, #9356DC 25%, #FF79DA 65%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                opacity: 0;
-
-                &:hover {
-                    opacity: 1;
-                    transition: opacity 0.3s;
-                }
-            }
-        }
+    & .menu-cards {
+        width: 32%;
     }
-
-    .menu-cards {
-        margin-top: 20px;
-
-        .menu {
-            width: 100%;
-            margin: 0px 0px 25px 0px;
-    
-            &__title {
-                font-size: 1.2em;
-                font-weight: 200;
-                position: relative;
-                text-transform: uppercase;
-                padding: 20px 0px 0px 10px;
-    
-                &::before {
-                    content: "";
-                    position: absolute;
-                    bottom: -5px;
-                    width: 40px; height: 4px;
-                    background-color: $tertiary-color;
-                }
-            }
-        }
-    
-        .cards {
-            background-color: white;
-            padding: 15px 25px 15px 15px;
-            border-radius: 20px;
-            box-shadow: 0px 5px 7px -2px rgba(0,0,0,0.23);
-            margin-bottom: 15px;
-
-            
-            &__title {
-                padding-bottom: 5px;
-            }
-
-            &__desc {
-                display: flex;
-                justify-content: space-between;
-    
-                /* Pour prendre le première <p> dans la dev cards__desc  */
-                & p:nth-child(1) {
-                    font-weight: 100;
-                }
-            }
-        }
-    }
+  }
 }

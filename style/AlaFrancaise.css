@@ -1,6 +1,29 @@
 @charset "UTF-8";
 /*CSS du header*/
 /*CSS du footer*/
+/*CSS des boutons avec dégradé rose*/
+/*le padding du bouton est une variable avec argument, par défaut 10px sur Y et 20px sur X, et 20px de border-radius par défaut*/
+/*CSS du container des menus*/
+@-webkit-keyframes toLeft {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes toLeft {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -70,6 +93,7 @@ header i:hover {
   cursor: pointer;
   position: relative;
   margin-right: 12px;
+  margin-top: 15px;
 }
 .container .presentation__icon__liked {
   position: absolute;
@@ -107,21 +131,144 @@ header i:hover {
   height: 4px;
   background-color: #99E2D0;
 }
-.container .menu-cards .cards {
-  background-color: white;
-  padding: 15px 25px 15px 15px;
-  border-radius: 20px;
-  box-shadow: 0px 5px 7px -2px rgba(0, 0, 0, 0.23);
-  margin-bottom: 15px;
-}
-.container .menu-cards .cards__title {
-  padding-bottom: 5px;
-}
-.container .menu-cards .cards__desc {
+.container .menu-cards .container-cards .cards {
   display: flex;
   justify-content: space-between;
-  /* Pour prendre le première <p> dans la dev cards__desc  */
+  background-color: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0px 10px 18px -5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-bottom: 15px;
 }
-.container .menu-cards .cards__desc p:nth-child(1) {
+.container .menu-cards .container-cards .cards__delay1 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s;
+}
+.container .menu-cards .container-cards .cards__delay2 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.2s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.2s both;
+}
+.container .menu-cards .container-cards .cards__delay3 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.3s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.3s both;
+}
+.container .menu-cards .container-cards .cards__delay4 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.4s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.4s both;
+}
+.container .menu-cards .container-cards .cards__delay5 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.5s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.5s both;
+}
+.container .menu-cards .container-cards .cards__delay6 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.6s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.6s both;
+}
+.container .menu-cards .container-cards .cards__delay7 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.7s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.7s both;
+}
+.container .menu-cards .container-cards .cards__delay8 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.8s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.8s both;
+}
+.container .menu-cards .container-cards .cards__delay9 {
+  -webkit-animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.9s both;
+          animation: toLeft cubic-bezier(0.17, 0.67, 0.67, 1.16) 0.8s 0.9s both;
+}
+.container .menu-cards .container-cards .cards:hover .cards__price-select {
+  margin-right: 0px;
+}
+.container .menu-cards .container-cards .cards:hover .cards__select i {
+  transform: rotate(-360deg);
+}
+.container .menu-cards .container-cards .cards__desc {
+  padding: 18px;
+  width: 250px;
+}
+.container .menu-cards .container-cards .cards__desc > h3 {
+  padding-bottom: 5px;
+}
+.container .menu-cards .container-cards .cards__desc > p {
   font-weight: 100;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.container .menu-cards .container-cards .cards__price-select {
+  display: flex;
+  margin-right: -70px;
+  transition: margin-right 0.5s;
+}
+.container .menu-cards .container-cards .cards__price {
+  display: flex;
+  align-items: flex-end;
+  padding: 0px 15px 17px 0px;
+}
+.container .menu-cards .container-cards .cards__select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 70px;
+  padding: 18px;
+  background-color: #99E2D0;
+}
+.container .menu-cards .container-cards .cards__select i {
+  transition: transform 0.6s;
+  font-size: 1.5em;
+}
+.container .container-btn {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px 80px 0px;
+}
+.container .container-btn .btn {
+  display: inline-block;
+  padding: 15px 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: transform 0.3s;
+}
+.container .container-btn .btn:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  padding: 20px 0px 25px 15px;
+  background-color: #353535;
+  color: #eaeaea;
+}
+footer h2 {
+  font-family: "Shrikhand";
+  font-size: 1.1em;
+  padding-bottom: 20px;
+}
+footer ul {
+  list-style-type: none;
+}
+footer li {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+footer .fa-utensils {
+  margin-right: 14px;
+}
+footer .fa-handshake-angle {
+  margin-right: 8px;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 920px) {
+  .container-menu-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-menu-cards .menu-cards {
+    width: 32%;
+  }
 }/*# sourceMappingURL=AlaFrancaise.css.map */

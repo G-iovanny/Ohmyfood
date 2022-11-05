@@ -24,6 +24,8 @@ header {
 .illustration {
     width: 100%;
     height: 300px;
+    position: absolute;
+    z-index: -1;
 
     img {
         width: 100%;

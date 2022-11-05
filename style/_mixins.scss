@@ -70,8 +70,11 @@
 
 /*CSS du container des menus*/
 @mixin container-menus {
-    width: 95%;
-    margin: auto;
+    width: 100%;
+    padding: 20px;
+    background-color: #eaeaea;
+    border-radius: 30px 30px 0px 0px;
+    margin-top: 250px;
 
     .presentation {
         display: flex;
@@ -197,12 +200,19 @@
 
             .cards__desc {
                 padding: 18px;
-                width: 250px;
+                max-width: 240px;
+                min-width: 0px;
 
                 & > h3 {
-                    padding-bottom: 5px;
+                font-size: 1em;
+                padding-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
                 }
+
                 & > p {
+                font-size: 0.8em;
                 font-weight: 100;
                 white-space: nowrap;
                 overflow: hidden !important;

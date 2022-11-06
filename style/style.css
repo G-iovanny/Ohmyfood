@@ -378,8 +378,20 @@ header i:hover {
   margin-bottom: 25px;
   box-shadow: 0px 10px 18px -5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
+  position: relative;
   /*Position relative pour pouvoir placer le like dégradé sur lui en absolute*/
   /*Like dégradé en absolu sur la même position, opacité qui passe de 0 à 1 seulement au hover*/
+}
+.card--news::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 7px 12px;
+  background-color: #99E2D0;
+  color: #106550;
 }
 .card:hover {
   transform: scale(1.05);

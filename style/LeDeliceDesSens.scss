@@ -1,0 +1,56 @@
+$fontTitle : "Shrikhand";
+$primary-color : #FF79DA;
+$secondary-color: #9356DC;
+$tertiary-color : #99E2D0;
+@import 'mixins';
+
+
+* { 
+    padding: 0; margin:0; 
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body {
+    background-color: #eaeaea;
+}
+
+/* Le CSS du header est dans _mixins.scs, on l'inclut en premier : */
+header {
+    @include header();
+}
+
+/*L'image d'illustration au top de la page*/
+.illustration {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.container {
+    @include container-menus();
+}
+
+footer {
+    @include footer();
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 920px) {
+  .container-menu-cards {
+    display: flex;
+    justify-content: space-between;
+
+    & .menu-cards {
+        width: 32%;
+    }
+  }
+}

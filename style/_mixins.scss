@@ -184,6 +184,10 @@
                     &9 {
                         animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 0.9s both;
                     }
+
+                    &10 {
+                        animation: toLeft cubic-bezier(.17,.67,.67,1.16) 0.8s 1s both;
+                    }
                 }
 
                 // au survol de la cards, le container se remet à 0px et l'icone rotate sur elle même
@@ -200,15 +204,12 @@
 
             .cards__desc {
                 padding: 18px;
-                max-width: 240px;
+                max-width: 272px;
                 min-width: 0px;
 
                 & > h3 {
                 font-size: 1em;
                 padding-bottom: 5px;
-                white-space: nowrap;
-                overflow: hidden !important;
-                text-overflow: ellipsis;
                 }
 
                 & > p {

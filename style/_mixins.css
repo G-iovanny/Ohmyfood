@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*CSS du header*/
+/*CSS du footer*/
+/*CSS des boutons avec dégradé rose*/
+/*le padding du bouton est une variable avec argument, par défaut 10px sur Y et 20px sur X, et 20px de border-radius par défaut*/
+/*CSS du container des menus*/
+@-webkit-keyframes toLeft {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes toLeft {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=_mixins.css.map */

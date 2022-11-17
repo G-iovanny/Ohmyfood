@@ -465,6 +465,10 @@ footer .fa-utensils {
 footer .fa-handshake-angle {
   margin-right: 8px;
 }
+footer a {
+  text-decoration: none;
+  color: #eaeaea;
+}
 
 /*MEDIA QUERIES*/
 @media screen and (min-width: 920px) {
